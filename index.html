@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			ul{
+				list-style: none;
+			}
+		</style>
+		<script>
+            window.onload = function(){
+                var btns = document.getElementsByTagName("button");
+                var inputs = document.getElementsByTagName("input");
+                function fun(flag){
+                    for (var i=0; i<inputs.length;i++) {
+                        inputs[i].checked = flag;
+                    }
+                }
+                inputs[0].onclick=function(){
+                	fun(true);
+                }
+                btns[0].onclick = function(){
+                    fun(true);
+                }
+                btns[1].onclick = function(){
+                    fun(false);
+                }
+                btns[2].onclick = function(){
+                    for (var i=0;i<inputs.length;i++) {
+                        inputs[i].checked == true ? inputs[i].checked = false : inputs[i].checked = true;
+                    }
+                }
+
+            }
+       </script>
+	</head>
+	<body>
+         <div id="box1">
+         	<!--<input type="checkbox" id="quan"/>
+         	<input type="button" value="全选" id="quanxuan" />
+         	<input type="button" value="不选" id="buxuan" />
+         	<input type="button" value="反选" id="fanxuan" />-->
+         	<input type="checkbox" />
+         	<button>全选</button>
+         	<button>不选</button>
+         	<button>反选</button>
+         	<hr />
+         </div>
+         <div id="box2">
+         	<ul >
+         		<li><input type="checkbox" id="qq"/></li>
+         		<li><input type="checkbox"/></li>
+         		<li><input type="checkbox"/></li>
+         		<li><input type="checkbox"/></li>
+         		<li><input type="checkbox"/></li>
+         		<li><input type="checkbox"/></li>
+         	</ul>
+         </div>
+	</body>
+	
+
+</html>
